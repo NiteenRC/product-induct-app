@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: DMA-SERVICE
+  config:
+    import: configserver:http://localhost:8082
   datasource:
     url: jdbc:mysql://localhost:3306/dmadb?createDatabaseIfNotExist=true
     username: root
@@ -15,8 +17,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
