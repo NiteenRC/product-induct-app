@@ -8,8 +8,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class DmaServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DmaServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DmaServiceApplication.class, args);
+    }
 
 }
