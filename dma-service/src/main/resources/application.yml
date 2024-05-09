@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: DMA-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/dmadb?createDatabaseIfNotExist=true
+    username: root
+    password: Root@123
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://localhost:8761/eureka/
