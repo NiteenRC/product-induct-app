@@ -10,3 +10,9 @@ spring:
         git:
           uri: https://github.com/NiteenRC/configurations
           default-label: master
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

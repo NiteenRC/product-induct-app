@@ -13,3 +13,8 @@ spring:
           uri: lb://DMA-SERVICE
           predicates:
             - Path=/api/dma/**
+
+        - id: product-service
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/api/product/**
