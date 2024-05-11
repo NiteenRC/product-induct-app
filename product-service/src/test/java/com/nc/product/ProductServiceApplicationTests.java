@@ -1,10 +1,10 @@
-package dmaservice;
+package com.nc.product;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DmaServiceApplicationTests {
+class ProductServiceApplicationTests {
 
     @Test
     void contextLoads() {

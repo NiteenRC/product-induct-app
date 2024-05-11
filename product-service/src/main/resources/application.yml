@@ -1,5 +1,7 @@
 server:
   port: 8084
+  servlet:
+    context-path: /api/product
 
 spring:
   application:
@@ -7,7 +9,7 @@ spring:
   config:
     import: configserver:http://localhost:8082
   datasource:
-    url: jdbc:mysql://localhost:3306/product-db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/product?createDatabaseIfNotExist=true
     username: root
     password: Root@123
   jpa:

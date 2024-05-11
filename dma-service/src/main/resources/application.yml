@@ -1,5 +1,7 @@
 server:
   port: 8083
+  servlet:
+    context-path: /api/dma
 
 spring:
   application:
@@ -7,7 +9,7 @@ spring:
   config:
     import: configserver:http://localhost:8082
   datasource:
-    url: jdbc:mysql://localhost:3306/dmadb?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/dma?createDatabaseIfNotExist=true
     username: root
     password: Root@123
   jpa:

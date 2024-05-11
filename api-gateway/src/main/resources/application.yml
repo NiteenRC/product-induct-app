@@ -18,3 +18,9 @@ spring:
           uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/api/product/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
