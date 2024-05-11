@@ -1,17 +1,20 @@
 server:
-  port: 8083
+  port: ${dma-server-port}
   servlet:
     context-path: /api/dma
 
 spring:
   application:
     name: DMA-SERVICE
+  profiles:
+    active:
+      - dev
   config:
     import: configserver:http://localhost:8082
   datasource:
-    url: jdbc:mysql://localhost:3306/dma?createDatabaseIfNotExist=true
-    username: root
-    password: Root@123
+    url: jdbc:mysql://localhost:3306/${dma-database}?createDatabaseIfNotExist=true
+    username: ${mysql-username}
+    password: ${mysql-password}
   jpa:
     show-sql: false
     hibernate:

@@ -1,10 +1,10 @@
-package com.gateway;
+package com.nc.config;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiGatewayApplicationTests {
+class ConfigServerApplicationTests {
 
     @Test
     void contextLoads() {

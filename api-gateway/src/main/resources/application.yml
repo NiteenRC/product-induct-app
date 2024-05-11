@@ -1,9 +1,12 @@
 server:
-  port: 8080
+  port: ${gateway-server-port}
 
 spring:
   application:
     name: API-GATEWAY
+  profiles:
+    active:
+      - dev
   config:
     import: configserver:http://localhost:8082
   cloud:
