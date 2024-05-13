@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Service Registry
+  service-registry:
+    image: niteenjava/service-registry:001
+    hostname: "service-registry"
+    ports:
+      - "8761:8761"
+    networks:
+      - my-network
+
+  # config server
+  config-server:
+    image: niteenjava/config-server:001
+    ports:
+      - "8082:8082"
+    links:
+      - "service-registry"
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://service-registry:8761/eureka
+    networks:
+      - my-network
+
+# Define a custom network for the services
+networks:
+  my-network:
+    driver: bridge

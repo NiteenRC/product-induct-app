@@ -1,0 +1,13 @@
+#MYSQL-DATABASE
+mysql-username: root
+mysql-password: Root@123
+
+#SERVICE-REGISTRY
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

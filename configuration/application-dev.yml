@@ -1,0 +1,19 @@
+#SERVICE-REGISTRY
+service-registry-port: 8761
+
+#API-GATEWAY
+gateway-server-port: 8080
+
+#CONFIG-SERVER
+config-server-port: 8082
+
+#HYSTRIX-DASHBOARD
+hystrix-dashboard-port: 8083
+
+#DMA-SERVICE
+dma-server-port: 8084
+dma-database: induct-dma
+
+#PRODUCT-SERVICE
+product-server-port: 8085
+product-database: induct-product
