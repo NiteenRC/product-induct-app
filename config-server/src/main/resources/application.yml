@@ -9,7 +9,6 @@ spring:
       server:
         git:
           uri: https://github.com/NiteenRC/product-induct-app/tree/master/configuration
-          default-label: master
 
 management:
   endpoints:
