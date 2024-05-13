@@ -1,5 +1,7 @@
 server:
   port: 8082
+  servlet:
+    context-path: /api/config
 
 spring:
   application:
@@ -8,7 +10,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/NiteenRC/product-induct-app/tree/master/configuration
+          uri: https://github.com/NiteenRC/configurations
+          default-label: master
 
 management:
   endpoints:

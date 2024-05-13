@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "82146245-6611-477a-9538-fd3c8e92cb55",
+		"name": "product-induct-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26537374"
+	},
+	"item": [
+		{
+			"name": "dma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"brandName\": \"iphone 12\",\n  \"brandDesc\": \"phone category\",\n  \"country\": \"USA\",\n  \"status\": \"Active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dma/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dma",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productName\": \"iPhone 15\",\n  \"productDesc\": \"iPhone 15 plus\",\n  \"brandId\": 6,\n  \"country\": \"INDIA\",\n  \"status\": \"Active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product/brands",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/brands",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dma",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/dma",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dma"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "config/actuator/dev",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>Name</th>",
+							"        <th>Value</th>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Environment</td>",
+							"        <td>test</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Data center</td>",
+							"        <td>default</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Current time</td>",
+							"        <td>2024-05-11T14:32:40 +0530</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Uptime</td>",
+							"        <td>04:27</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Lease expiration enabled</td>",
+							"        <td>false</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Renews threshold</td>",
+							"        <td>8</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Renews (last min)</td>",
+							"        <td>8</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>total-avail-memory</td>",
+							"        <td>69mb</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>num-of-cpus</td>",
+							"        <td>4</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>current-memory-usage</td>",
+							"        <td>46mb (66%)</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>server-uptime</td>",
+							"        <td>04:27</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>registered-replicas</td>",
+							"        <td></td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>unavailable-replicas</td>",
+							"        <td></td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>available-replicas</td>",
+							"        <td></td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>ipAddr</td>",
+							"        <td>192.0.0.1</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>status</td>",
+							"        <td>UP</td>",
+							"    </tr>",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    var res = pm.response.text();",
+							"    // Extracting relevant data from the response and formatting it for visualization",
+							"    var visualizerData = {",
+							"        \"Environment\": \"test\",",
+							"        \"Data center\": \"default\",",
+							"        \"Current time\": \"2024-05-11T14:32:40 +0530\",",
+							"        \"Uptime\": \"04:27\",",
+							"        \"Lease expiration enabled\": \"false\",",
+							"        \"Renews threshold\": \"8\",",
+							"        \"Renews (last min)\": \"8\",",
+							"        \"total-avail-memory\": \"69mb\",",
+							"        \"num-of-cpus\": \"4\",",
+							"        \"current-memory-usage\": \"46mb (66%)\",",
+							"        \"server-uptime\": \"04:27\",",
+							"        \"registered-replicas\": \"\",",
+							"        \"unavailable-replicas\": \"\",",
+							"        \"available-replicas\": \"\",",
+							"        \"ipAddr\": \"192.0.0.1\",",
+							"        \"status\": \"UP\"",
+							"    };",
+							"",
+							"    return { response: visualizerData };",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/config/actuator/dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"config",
+						"actuator",
+						"dev"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

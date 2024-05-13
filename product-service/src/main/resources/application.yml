@@ -38,7 +38,7 @@ management:
 resilience4j:
   circuitbreaker:
     instances:
-      customerService:
+      productService:
         registerHealthIndicator: true
         eventConsumerBufferSize: 10
         failureRateThreshold: 50
@@ -48,9 +48,3 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 3
         slidingWindowSize: 10
         slidingWindowType: COUNT_BASED
-
-  retry:
-    instances:
-      customerService:
-        maxRetryAttempts: 5
-        waitDuration: 10s

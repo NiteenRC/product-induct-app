@@ -1,9 +1,0 @@
-#MYSQL-DATABASE
-mysql-username: root
-mysql-password: Root@123
-
-#SERVICE-REGISTRY
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/

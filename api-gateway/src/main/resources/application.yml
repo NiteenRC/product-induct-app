@@ -12,6 +12,11 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: config-server
+          uri: lb://CONFIG-SERVER
+          predicates:
+            - Path=/api/config/**
+
         - id: dma-service
           uri: lb://DMA-SERVICE
           predicates:
